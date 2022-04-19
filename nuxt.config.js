@@ -25,11 +25,12 @@ const {
 
 export default () => {
   const baseConfig = {
+    // target: 'static',
     ssr: true,
     dev: config.get('nuxtAppEnvironment') !== 'production',
     server: {
       port: process.env.PORT || config.get('nuxtAppPort'),
-      host: '0.0.0.0',
+      host: '127.0.0.1',
     },
     head: {
       title: process.env.npm_package_name || '',
